@@ -306,7 +306,7 @@ function loginHelper(appState, email, password, globalOptions, callback) {
   // back into the jar.
   if(appState) {
     appState.cookies.map(function(c) {
-      var str = c.name + "=" + c.value + "; expires=" + c.expires + "; domain=" + c.domain + "; path=" + c.path + ";";
+      var str = c.name + "=" + c.value + "; expires=" + c.expirationDate + "; domain=" + c.domain + "; path=" + c.path + ";";
       jar.setCookie(str, "http://" + c.domain);
     });
 
